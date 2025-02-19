@@ -114,7 +114,7 @@ input:focus {
   border-color: khaki;
 }
 
-button {
+.button-calculate {
   border: 1px solid black;
   margin: 10px;
   padding: 5px;
@@ -123,7 +123,22 @@ button {
   background-color: goldenrod;
 }
 
-button:hover {
+.button-calculate:hover {
+  border: 1px solid black;
+  background-color: khaki;
+  transition: 0.3s ease-in-out;
+}
+
+.button-compare {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  margin-left: 15em;
+  border-radius: 10px;
+  background-color: goldenrod;
+}
+
+.button-compare:hover {
   border: 1px solid black;
   background-color: khaki;
   transition: 0.3s ease-in-out;
@@ -163,3 +178,35 @@ h3 {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+.array{
+  padding: 80px;
+}
+
+.button-array {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: goldenrod;
+}
+
+.button-array:hover {
+  border: 1px solid black;
+  background-color: khaki;
+  transition: 0.3s ease-in-out;
+}
+
+.data-array{
+  text-align: center;
+  font-size: 10px;
+  padding: 50px;
+}
+
+h2{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.checkbox{
+  padding: 20px;
+}

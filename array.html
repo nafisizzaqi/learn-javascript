@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="program.html">&laquo; Back to home</a>
+    <h1>Page to Manipulation Array</h1>
+    <h3>insert data to add delete retrieve array data</h3>
+    <h2 id="hasil"></h2>
+
+    <div class="form-style">
+      <form action="#">
+        <div class="array">
+          <label for="input">Input : </label>
+          <input type="text" name="input" id="input" class="input-array" autocomplete="off"/>
+
+            <div class="checkbox">
+          <input type="checkbox" id="method1" name="method1" value="Push" onclick="pushMethod()">
+          <label for="method1">Push</label>
+
+          <input type="checkbox" id="method2" name="method2" value="Pop" onclick="popMethod()">
+          <label for="method2">Pop</label>
+
+          <input type="checkbox" id="method3" name="method3" value="Unshift" onclick="unShiftMethod()">
+          <label for="method3">Unshift</label>
+
+          <input type="checkbox" id="method4" name="method4" value="Shift" onclick="shiftMethod()">
+          <label for="method4">Shift</label>
+            </div>
+            <div class="check">
+          <input type="checkbox" id="method6" name="method6" value="Sort" onclick="shortMethod()">
+          <label for="method6">Sort</label>
+
+          <input type="checkbox" id="method7" name="method7" value="Slice" onclick="sliceMethod()">
+          <label for="method7">Slice</label>
+
+          <input type="checkbox" id="method8" name="method8" value="Splice">
+          <label for="method8">Splice</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="program.js"></script>
+  </body>
+</html>

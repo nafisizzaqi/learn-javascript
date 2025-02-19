@@ -1,4 +1,5 @@
-const body = document.getElementById("value1");
+let body = document.body;
+
 
 function tambahAngka1() {
   let input = document.getElementById("angka1");
@@ -33,7 +34,7 @@ function hitung() {
   let angka2 = parseFloat(document.getElementById("angka2").value);
   let operator = document.getElementById("operator").value;
   let hasil;
-  if (isNaN(angka1 || isNaN(angka2))) {
+  if (isNaN(angka1) || isNaN(angka2)) {
     alert("Masukkan angka dengan benar");
   }
 
@@ -83,7 +84,7 @@ function tambahkan() {
   }
 
   document.getElementById("value1").textContent = input1;
-  document.getElementById("operator").textContent = operator;
+  document.getElementById("operasi").textContent = operator;
   document.getElementById("value2").textContent = input2;
 }
 
@@ -114,4 +115,65 @@ function compare() {
   }
 
   document.getElementById("hasil").textContent = hasil;
+}
+
+let array = ["buku", "pensil", "pulpen"];
+function display() {
+  let hasil = document.getElementById("hasil");
+  hasil.textContent = "";
+
+  let textArray = document.createElement("h2");
+  textArray.textContent = array.map((item) => `"${item}"`).join(", ");
+  hasil.appendChild(textArray);
+}
+
+if (window.location.pathname.includes("array.html")) {
+  display();
+}
+
+function pushMethod() {
+  let checkbox = document.getElementById("method1");
+  let input = document.getElementById("input").value;
+
+  if (checkbox.checked && input) {
+    array.push(input);
+    display();
+  }
+}
+
+function popMethod() {
+  let checkbox = document.getElementById("method2");
+
+  if (checkbox.checked && array.length > 0) {
+    array.pop();
+    display();
+  }
+}
+
+function unShiftMethod() {
+  let checkbox = document.getElementById("method3");
+  let input = document.getElementById("input").value;
+
+  if (checkbox.checked && input) {
+    array.unshift(input);
+    display();
+  }
+}
+
+function shiftMethod() {
+  let checkbox = document.getElementById("method4");
+
+  if (checkbox.checked && array.length > 0) {
+    array.shift();
+    display();
+  }
+}
+
+function shortMethod() {
+  let checkbox = document.getElementById("method6");
+
+  if (checkbox.checked) {
+    array.sort();
+    display();
+  }
 }

@@ -9,6 +9,7 @@
   <body>
     <a href="program.html">&laquo; Back to home</a>
     <h1>Page to Calculations</h1>
+    <h3>Only calculate number</h3>
     <div class="form-style">
       <form action="#">
         <div class="angka1">
@@ -18,6 +19,7 @@
             name="number"
             id="angka1"
             onkeyup="tambahAngka1()"
+            autocomplete="off"
           />
         </div>
         <div class="angka2">
@@ -27,6 +29,7 @@
             name="operator"
             id="operator"
             onkeyup="tambahOperator()"
+            autocomplete="off"
           />
         </div>
         <div class="angka2">
@@ -36,6 +39,7 @@
             name="number"
             id="angka2"
             onkeyup="tambahAngka2()"
+            autocomplete="off"
           />
         </div>
       </form>
@@ -49,7 +53,7 @@
         <p>=</p>
         <p id="hasil"></p>
       </div>
-      <button onclick="hitung()">Count</button>
+      <button class="button-calculate" onclick="hitung()">Count</button>
     </div>
 
     <script src="program.js"></script>
