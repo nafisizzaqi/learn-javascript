@@ -332,7 +332,6 @@
 // Object.keys(drink).forEach(key => {
 //     newDrink[key] = drink[key];
 // });
-
 // console.log(newDrink)
 
 // let listBarang = {
@@ -398,17 +397,17 @@
 // console.log(merkHp)
 // console.log(listHp)
 
-let siswa = [
-  { nama: "nafis", umur: 17, tinggal: "ngadirno" },
-  { nama: "izzaqi", umur: 20, tinggal: "pluto" },
-  { nama: "dafa", umur: 16, tinggal: "tegalwatan" },
-  { nama: "ayuna", umur: 18, tinggal: "klera" },
-];
+// let siswa = [
+//   { nama: "nafis", umur: 17, tinggal: "ngadirno" },
+//   { nama: "izzaqi", umur: 20, tinggal: "pluto" },
+//   { nama: "dafa", umur: 16, tinggal: "tegalwatan" },
+//   { nama: "ayuna", umur: 18, tinggal: "klera" },
+// ];
 
-const namaPanjang = siswa.reduce((terpanjang, current) => {
-  return current.nama.length < terpanjang.nama.length ? current : terpanjang;
-});
-console.log(namaPanjang)
+// const namaPanjang = siswa.reduce((terpanjang, current) => {
+//   return current.nama.length < terpanjang.nama.length ? current : terpanjang;
+// });
+// console.log(namaPanjang)
 
 // const nama = siswa.map((n) => n.nama).join(", ");
 // console.log(nama);
@@ -509,3 +508,61 @@ console.log(namaPanjang)
 
 // const barang1 = barang.find((barang1) => barang1.merk === "milo");
 // console.log(barang1)
+
+let product = [
+  { nama: "Laptop", harga: 15_000_000, stock: 20 },
+  { nama: "Smartphone", harga: 5_000_000, stock: 35 },
+  { nama: "Headphone", harga: 3_000_000, stock: 26 },
+  { nama: "Mouse", harga: 6_500_000, stock: 23 },
+  { nama: "Ipad", harga: 900_000, stock: 9 },
+];
+
+//SOAL 1
+// const nama = product.map((p) => p.nama);
+// console.log(nama);
+
+//SOAL 2
+// const stock = product.filter((f) => f.stock > 20);
+// console.log(stock);
+
+//SOAL 3
+// const totalHarga = product.reduce((total, p) => total + p.harga, 0);
+// console.log(`total harga product adalah : Rp ${totalHarga}`);
+
+//SOAL 4
+// const hargaTinggi = product.reduce((tertinggi, current) => {
+//   return current.harga > tertinggi.harga ? current : tertinggi;
+// });
+// const namaBarang = `${hargaTinggi.nama} dengan harga Rp ${hargaTinggi.harga}`;
+// console.log(`Barang dengan harga tertinggi adalah : ${namaBarang}`);
+
+//SOAL 5
+// product.push({ nama: "Komputer", harga: 20_000_000, stock: "17" });
+// let baru = product.map();
+// const productBaru = `${baru.nama} dengan harga ${baru.harga} stock yang ada ${baru.stock}`;
+// console.log(`product baru yang ditambahkan yaitu : ${productBaru}`);
+
+//SOAL 6
+// const hargaLebih = product.filter((h) => h.harga > 5_000_000);
+// console.log(hargaLebih);
+
+//SOAL 7
+// const totalStock = product.reduce((total, s) => total + s.stock, 0);
+// console.log(totalStock)
+
+//SOAL 8
+// const stockTerendah = product.reduce((terendah, current) => {
+//   return current.stock < terendah.stock ? current : terendah;
+// });
+// console.log(stockTerendah)
+
+//SOAL 9
+// const urut = product.sort((a, b) => a.harga - b.harga);
+// console.log(urut)
+
+//SOAL 10
+// const productLebih = product.filter(
+//   (pl) => pl.stock > 10 && pl.harga > 1_000_000 
+// );
+// console.log(productLebih);
+

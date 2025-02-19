@@ -1,0 +1,82 @@
+#navbar {
+  background-color: lightgray;
+  width: 100%; /* Navbar full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navlink {
+  display: flex;
+  gap: 15px; /* Memberi jarak antar menu */
+  margin-top: 0;
+  padding-right: 100px;
+}
+
+.logo {
+  height: 40px;
+  padding-left: 50px;
+}
+
+a {
+  background-color: gray;
+  border: none; /* Hapus border agar lebih clean */
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px; /* Biar tombol lebih bagus */
+  transition: 0.3s; /* Animasi hover */
+}
+
+a:hover {
+  background-color: darkgray;
+}
+
+#hero {
+  padding-top: 100px;
+}
+
+.title {
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+  height: 40vh;
+}
+
+.img {
+  display: grid;
+  grid-template-columns: 150px auto; /* Kolom pertama untuk gambar, kedua untuk teks */
+  gap: 100px; /* Jarak antara gambar dan teks */
+  align-items: center; /* Agar konten sejajar secara vertikal */
+  padding: 10px;
+}
+
+.profil {
+  width: 100%; /* Gambar otomatis menyesuaikan */
+  max-width: 150px; /* Maksimum lebar gambar */
+  border-radius: 50%; /* Agar gambar jadi lingkaran */
+}
+
+.img p {
+  margin: 0; /* Menghapus margin bawaan */
+  font-size: 16px;
+  color: #333;
+  width: 500px;
+}
+
+.title-game {
+    text-align:center;
+  font-size: 40px;
+  color: red;
+}

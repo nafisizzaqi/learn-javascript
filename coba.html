@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 style="margin: auto; text-align: center">
+      Belajar DOM bersama <em>Hacktiv8</em>
+    </h1>
+    <div id="card">
+      <div style="font-weight: bold; font-size: large" id="box-title"></div>
+      <hr />
+      <ol>
+        <li>
+          <div class="box-list"></div>
+        </li>
+        <li>
+          <div class="box-list"></div>
+        </li>
+        <li>
+          <div class="box-list"></div>
+        </li>
+      </ol>
+
+      <button id="my-button">CSS</button>
+      <button onclick="myFunction()">CSS DOM</button>
+      <button onclick="showAlert()">Simpan</button>
+
+      <div
+        style="
+          margin-top: 10px;
+          border-width: 2px;
+          border-radius: 10px;
+          border-color: black;
+          border-style: solid;
+          padding: 20px;
+        "
+      >
+        <input
+          style="float: left"
+          type="text"
+          id="my-input"
+          onkeyup="getValueInput()"
+        />
+        <button style="float: left" onclick="gantiWarna()">Confirm</button>
+
+        <br />
+        <p>Pesanan anda materi nomor</p>
+        <div style="float: left" id="input-of-value"></div>
+        <div style="float: left">&nbsp;Jumlah&nbsp;</div>
+        <div style="float: left">
+          <div style="float: left" id="count">0</div>
+          <button style="margin-left: 10px; float: left" onclick="plus()">
+            +
+          </button>
+          <button style="float: left" onclick="mines()">-</button>
+        </div>
+        <br />
+      </div>
+    </div>
+    <script>
+      document.getElementById("box-title").innerHTML = "Materi Phase 0";
+
+      document.getElementsByClassName("box-list")[0].innerHTML = "Javascript";
+      document.getElementsByClassName("box-list")[1].innerHTML = "Algoritma";
+      document.getElementsByClassName("box-list")[2].innerHTML = "HTML";
+
+      let getButton = document.getElementById("my-button");
+
+      getButton.addEventListener("click", function () {
+        document.getElementsByClassName("box-list")[2].innerHTML = "HTML & CSS";
+      });
+
+      function myFunction() {
+        document.getElementsByClassName("box-list")[2].innerHTML =
+          "HTML CSS & DOM";
+      }
+
+      function showAlert() {
+        alert("Hello your materi has been changes");
+      }
+
+      function getValueInput() {
+        let input = document.getElementById("my-input");
+        let value = input.value;
+        document.getElementById("input-of-value").innerHTML = value;
+      }
+
+      function gantiWarna() {
+        document.getElementById("input-of-value").style.color = "red";
+        document.getElementById("input-of-value").style.fontWeight = "bold";
+      }
+
+      let counter = 0;
+      function plus() {
+        counter++;
+        document.getElementById("count").innerHTML = counter;
+      }
+
+      function mines() {
+        if (counter < 1) {
+          alert("Minimal 1 tidak bisa minus");
+        } else {
+          counter--;
+          document.getElementById("count").innerHTML = counter;
+        }
+      }
+    </script>
+  </body>
+</html>

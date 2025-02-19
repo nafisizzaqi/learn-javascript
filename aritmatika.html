@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Aritmatika</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="program.html">&laquo; Back to home</a>
+    <h1>Page to Calculations</h1>
+    <div class="form-style">
+      <form action="#">
+        <div class="angka1">
+          <label for="number">Angka 1 : </label>
+          <input
+            type="number"
+            name="number"
+            id="input1"
+            onkeyup="tambahAngka1()"
+          />
+        </div>
+        <div class="angka2">
+          <label for="number">Angka 2 : </label>
+          <input
+            type="number"
+            name="number"
+            id="input2"
+            onkeyup="tambahAngka2()"
+          />
+        </div>
+        <div class="angka2">
+          <label for="operator">Operator : </label>
+          <input
+            type="text"
+            name="operator"
+            id="operator"
+            onkeyup="tambahOperator()"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="result">
+      <h3>Result :</h3>
+      <div class="angka">
+        <p id="value1">...</p>
+        <p id="operasi"></p>
+        <p id="value2">...</p>
+        <p>=</p>
+        <p id="hasil"></p>
+      </div>
+      <button onclick="hitung()">Count</button>
+    </div>
+
+    <script src="program.js"></script>
+  </body>
+</html>
