@@ -269,3 +269,28 @@ h2{
 .string-span{
   margin-left: 10px;
 }
+
+.button-atas {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-atas a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}

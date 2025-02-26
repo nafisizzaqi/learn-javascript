@@ -9,7 +9,19 @@
   <body>
     <a href="program.html">&laquo; Back to home</a>
     <h1>String Property Page</h1>
-    <h3>hai</h3>
+    <h3>This page to try Property of String</h3>
+
+    <div class="container">
+      <div class="button-atas"><a href="length.html">length</a></div>
+      <div class="button-atas"><a href="charAt.html">charAt</a></div>
+      <div class="button-atas"><a href="concat.html">concat</a></div>
+      <div class="button-atas"><a href="indexOf.html">indexOf</a></div>
+      <div class="button-atas"><a href="substring.html">substring</a></div>
+      <div class="button-atas"><a href="toString.html">toString</a></div>
+      <div class="button-atas"><a href="number.html">Number</a></div>
+      <div class="button-atas"><a href="parseInt.html">parseInt</a></div>
+      <div class="button-atas"><a href="parseFloat.html">parseFloat</a></div>
+    </div>
 
     <div class="string-form-style">
       <form action="#">
@@ -160,6 +172,106 @@
           </div>
           <button type="button" class="button-string" onclick="tampilString4()">
             Tampilkan
+          </button>
+        </div>
+      </form>
+
+      <form action="#">
+        <div class="string">
+          <div class="label-input">
+            <label for="text">Input Angka : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-number"
+              class="input-string"
+              autocomplete="off"
+            />
+          </div>
+          <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="hasil-konversi">...</p>
+          </div>
+          <button
+            type="button"
+            class="button-string"
+            onclick="konversiString()"
+          >
+            Konversi
+          </button>
+        </div>
+      </form>
+
+      <form action="#">
+        <div class="string">
+          <div class="label-input">
+            <label for="text">Input String : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-string1"
+              class="input-string"
+              autocomplete="off"
+            />
+          </div>
+          <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="hasil-konversi-1">...</p>
+          </div>
+          <button
+            type="button"
+            class="button-string"
+            onclick="konversiInteger1()"
+          >
+            Konversi
+          </button>
+        </div>
+      </form>
+
+      <form action="#">
+        <div class="string">
+          <div class="label-input">
+            <label for="text">Input String : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-string2"
+              class="input-string"
+              autocomplete="off"
+            />
+          </div>
+          <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="hasil-konversi-2">...</p>
+          </div>
+          <button
+            type="button"
+            class="button-string"
+            onclick="konversiInteger2()"
+          >
+            Konversi
+          </button>
+        </div>
+      </form>
+
+      <form action="#">
+        <div class="string">
+          <div class="label-input">
+            <label for="text">Input Angka : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-angkaInteger"
+              class="input-string"
+              autocomplete="off"
+            />
+          </div>
+          <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="hasil-konversiFloat">...</p>
+          </div>
+          <button type="button" class="button-string" onclick="konversiFloat()">
+            Konversi
           </button>
         </div>
       </form>
