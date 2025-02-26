@@ -16,23 +16,27 @@
 
 //TUGAS LOOPING
 
-const x = [3, 5, 12]; 
+// const x = [3, 5, 12];
 
-let total = 0;
-for (let i = 0; i < x.length; i++) {
-    total += x[i];
-}
-console.log(total); 
+// let total = 0;
+// for (let i = 0; i < x.length; i++) {
+//     total += x[i];
+// }
+// console.log(total);
 
+// const pacarSaya = ['yuna', 'tisya', 'safna', 'pinkky', 'adikkelas']
 
-const pacarSaya = ['yuna', 'tisya', 'safna', 'pinkky', 'adikkelas']
+// console.log(pacarSaya)
 
-console.log(pacarSaya)
+// for(let pacar of pacarSaya){
+//     console.log(pacar)
+// }
 
-for(let pacar of pacarSaya){
-    console.log(pacar)
-}
+// pacarSaya.forEach((pacar, index) => {
+//     console.log(pacar, index)
+// })
 
-pacarSaya.forEach((pacar, index) => {
-    console.log(pacar, index)
-})
+let contoh = ["hai", "iya", "kamu"];
+// let coba = contoh.map((kata) => kata.charAt(0));
+let coba = contoh[0].charAt(1)
+console.log(coba);

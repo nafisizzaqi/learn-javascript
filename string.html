@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="program.html">&laquo; Back to home</a>
+    <h1>String Property Page</h1>
+    <h3>hai</h3>
+
+    <div class="string-form-style">
+      <form action="#">
+        <div class="string">
+          <div class="label-input">
+            <label for="text">Input : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-string-text1"
+              class="input-string"
+              autocomplete="off"
+            />
+          </div>
+          <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="string-hasil1">...</p>
+          </div>
+          <button type="button" class="button-string" onclick="tampilString1()">
+            Tampilkan
+          </button>
+        </div>
+      </form>
+
+      <form action="#">
+        <span class="string-span" id="text-string">...</span>
+        <div class="string">
+          <label for="text">Input text : </label>
+          <input
+            type="text"
+            name="text"
+            id="input-string-text2"
+            class="input-string"
+            autocomplete="off"
+            onkeyup="tambahText()"
+          />
+          <label for="text">Input index : </label>
+          <input
+            type="text"
+            name="text"
+            id="input-index"
+            class="input-string"
+            autocomplete="off"
+            onkeyup="tambahText()"
+          />
+          <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="string-hasil2">...</p>
+          </div>
+          <button type="button" class="button-string" onclick="tampilString2()">
+            Tampilkan
+          </button>
+        </div>
+      </form>
+
+      <form action="#">
+        <span class="string-span" id="text-string2">...</span>
+        <div class="string">
+          <div class="label-input">
+            <label for="text">Input 1 : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-string-text3"
+              class="input-string"
+              autocomplete="off"
+            />
+          </div>
+          <div class="label-input">
+            <label for="text">Input 2 : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-string-text4"
+              class="input-string"
+              autocomplete="off"
+            />
+          </div>
+          <!-- <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="string-hasil3">...</p>
+          </div> -->
+          <button type="button" class="button-string" onclick="tampilString3()">
+            Tampilkan
+          </button>
+        </div>
+      </form>
+
+      <form action="#">
+        <span class="string-span" id="text-string-4">...</span>
+        <div class="string">
+          <label for="text">Input text : </label>
+          <input
+            type="text"
+            name="text"
+            id="input-string-text-4"
+            class="input-string"
+            autocomplete="off"
+            onkeyup="tambahText2()"
+          />
+          <label for="text">Input char : </label>
+          <input
+            type="text"
+            name="text"
+            id="input-char"
+            class="input-string"
+            autocomplete="off"
+            onkeyup="tambahText2()"
+          />
+          <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="string-hasil-4">...</p>
+          </div>
+        </div>
+      </form>
+
+      <form action="#">
+        <span class="string-span" id="text-string-5">...</span>
+        <div class="string">
+          <label for="text">Input text : </label>
+          <input
+            type="text"
+            name="text"
+            id="input-string-text-5"
+            class="input-string"
+            autocomplete="off"
+            onkeyup="tambahText3()"
+          />
+          <label for="text">Input index 1 : </label>
+          <input
+            type="text"
+            name="text"
+            id="input-index-1"
+            class="input-string"
+            autocomplete="off"
+          />
+          <label for="text">Input index 2 : </label>
+          <input
+            type="text"
+            name="text"
+            id="input-index-2"
+            class="input-string"
+            autocomplete="off"
+          />
+          <div class="hasil">
+            <p class="">hasil :</p>
+            <p id="string-hasil-5">...</p>
+          </div>
+          <button type="button" class="button-string" onclick="tampilString4()">
+            Tampilkan
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="program.js"></script>
+  </body>
+</html>
