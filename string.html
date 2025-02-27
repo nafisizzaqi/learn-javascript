@@ -12,270 +12,321 @@
     <h3>This page to try Property of String</h3>
 
     <div class="container">
-      <div class="button-atas"><a href="length.html">length</a></div>
-      <div class="button-atas"><a href="charAt.html">charAt</a></div>
-      <div class="button-atas"><a href="concat.html">concat</a></div>
-      <div class="button-atas"><a href="indexOf.html">indexOf</a></div>
-      <div class="button-atas"><a href="substring.html">substring</a></div>
-      <div class="button-atas"><a href="toString.html">toString</a></div>
-      <div class="button-atas"><a href="number.html">Number</a></div>
-      <div class="button-atas"><a href="parseInt.html">parseInt</a></div>
-      <div class="button-atas"><a href="parseFloat.html">parseFloat</a></div>
+      <div class="button-atas" onclick="showForm('lengthForm')">
+        <a>length</a>
+      </div>
+      <div class="button-atas" onclick="showForm('charAtForm')">
+        <a>charAt</a>
+      </div>
+      <div class="button-atas" onclick="showForm('concatForm')">
+        <a>concat</a>
+      </div>
+      <div class="button-atas" onclick="showForm('indexOfForm')">
+        <a>indexOf</a>
+      </div>
+      <div class="button-atas" onclick="showForm('substringForm')">
+        <a>substring</a>
+      </div>
+      <div class="button-atas" onclick="showForm('toStringForm')">
+        <a>toString</a>
+      </div>
+      <div class="button-atas" onclick="showForm('NumberForm')">
+        <a>Number</a>
+      </div>
+      <div class="button-atas" onclick="showForm('parseIntForm')">
+        <a>parseInt</a>
+      </div>
+      <div class="button-atas" onclick="showForm('parseFloatForm')">
+        <a>parseFloat</a>
+      </div>
     </div>
 
-    <div class="string-form-style">
-      <form action="#">
-        <div class="string">
-          <div class="label-input">
-            <label for="text">Input : </label>
-            <input
-              type="text"
-              name="text"
-              id="input-string-text1"
-              class="input-string"
-              autocomplete="off"
-            />
+    <section id="form">
+      <div class="string-form-style">
+        <form id="lengthForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <div class="string">
+            <div class="label-input">
+              <label for="text">Input : </label>
+              <input
+                type="text"
+                name="text"
+                id="input-string-text1"
+                class="input-string"
+                autocomplete="off"
+              />
+            </div>
+            <div class="hasil">
+              <p class="">hasil :</p>
+              <p id="string-hasil1">...</p>
+            </div>
+            <button
+              type="button"
+              class="button-string"
+              onclick="tampilString1()"
+            >
+              Tampilkan
+            </button>
           </div>
-          <div class="hasil">
-            <p class="">hasil :</p>
-            <p id="string-hasil1">...</p>
-          </div>
-          <button type="button" class="button-string" onclick="tampilString1()">
-            Tampilkan
-          </button>
-        </div>
-      </form>
+        </form>
 
-      <form action="#">
-        <span class="string-span" id="text-string">...</span>
-        <div class="string">
-          <label for="text">Input text : </label>
-          <input
-            type="text"
-            name="text"
-            id="input-string-text2"
-            class="input-string"
-            autocomplete="off"
-            onkeyup="tambahText()"
-          />
-          <label for="text">Input index : </label>
-          <input
-            type="text"
-            name="text"
-            id="input-index"
-            class="input-string"
-            autocomplete="off"
-            onkeyup="tambahText()"
-          />
-          <div class="hasil">
-            <p class="">hasil :</p>
-            <p id="string-hasil2">...</p>
+        <form id="charAtForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <span class="string-span" id="text-string">...</span>
+          <div class="string">
+            <label for="text">Input text : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-string-text2"
+              class="input-string"
+              autocomplete="off"
+              onkeyup="tambahText()"
+            />
+            <label for="text">Input index : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-index"
+              class="input-string"
+              autocomplete="off"
+              onkeyup="tambahText()"
+            />
+            <div class="hasil">
+              <p class="">hasil :</p>
+              <p id="string-hasil2">...</p>
+            </div>
+            <button
+              type="button"
+              class="button-string"
+              onclick="tampilString2()"
+            >
+              Tampilkan
+            </button>
           </div>
-          <button type="button" class="button-string" onclick="tampilString2()">
-            Tampilkan
-          </button>
-        </div>
-      </form>
+        </form>
 
-      <form action="#">
-        <span class="string-span" id="text-string2">...</span>
-        <div class="string">
-          <div class="label-input">
-            <label for="text">Input 1 : </label>
-            <input
-              type="text"
-              name="text"
-              id="input-string-text3"
-              class="input-string"
-              autocomplete="off"
-            />
-          </div>
-          <div class="label-input">
-            <label for="text">Input 2 : </label>
-            <input
-              type="text"
-              name="text"
-              id="input-string-text4"
-              class="input-string"
-              autocomplete="off"
-            />
-          </div>
-          <!-- <div class="hasil">
+        <form id="concatForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <span class="string-span" id="text-string2">...</span>
+          <div class="string">
+            <div class="label-input">
+              <label for="text">Input 1 : </label>
+              <input
+                type="text"
+                name="text"
+                id="input-string-text3"
+                class="input-string"
+                autocomplete="off"
+              />
+            </div>
+            <div class="label-input">
+              <label for="text">Input 2 : </label>
+              <input
+                type="text"
+                name="text"
+                id="input-string-text4"
+                class="input-string"
+                autocomplete="off"
+              />
+            </div>
+            <!-- <div class="hasil">
             <p class="">hasil :</p>
             <p id="string-hasil3">...</p>
           </div> -->
-          <button type="button" class="button-string" onclick="tampilString3()">
-            Tampilkan
-          </button>
-        </div>
-      </form>
-
-      <form action="#">
-        <span class="string-span" id="text-string-4">...</span>
-        <div class="string">
-          <label for="text">Input text : </label>
-          <input
-            type="text"
-            name="text"
-            id="input-string-text-4"
-            class="input-string"
-            autocomplete="off"
-            onkeyup="tambahText2()"
-          />
-          <label for="text">Input char : </label>
-          <input
-            type="text"
-            name="text"
-            id="input-char"
-            class="input-string"
-            autocomplete="off"
-            onkeyup="tambahText2()"
-          />
-          <div class="hasil">
-            <p class="">hasil :</p>
-            <p id="string-hasil-4">...</p>
+            <button
+              type="button"
+              class="button-string"
+              onclick="tampilString3()"
+            >
+              Tampilkan
+            </button>
           </div>
-        </div>
-      </form>
+        </form>
 
-      <form action="#">
-        <span class="string-span" id="text-string-5">...</span>
-        <div class="string">
-          <label for="text">Input text : </label>
-          <input
-            type="text"
-            name="text"
-            id="input-string-text-5"
-            class="input-string"
-            autocomplete="off"
-            onkeyup="tambahText3()"
-          />
-          <label for="text">Input index 1 : </label>
-          <input
-            type="text"
-            name="text"
-            id="input-index-1"
-            class="input-string"
-            autocomplete="off"
-          />
-          <label for="text">Input index 2 : </label>
-          <input
-            type="text"
-            name="text"
-            id="input-index-2"
-            class="input-string"
-            autocomplete="off"
-          />
-          <div class="hasil">
-            <p class="">hasil :</p>
-            <p id="string-hasil-5">...</p>
-          </div>
-          <button type="button" class="button-string" onclick="tampilString4()">
-            Tampilkan
-          </button>
-        </div>
-      </form>
-
-      <form action="#">
-        <div class="string">
-          <div class="label-input">
-            <label for="text">Input Angka : </label>
+        <form id="indexOfForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <span class="string-span" id="text-string-4">...</span>
+          <div class="string">
+            <label for="text">Input text : </label>
             <input
               type="text"
               name="text"
-              id="input-number"
+              id="input-string-text-4"
               class="input-string"
               autocomplete="off"
+              onkeyup="tambahText2()"
             />
-          </div>
-          <div class="hasil">
-            <p class="">hasil :</p>
-            <p id="hasil-konversi">...</p>
-          </div>
-          <button
-            type="button"
-            class="button-string"
-            onclick="konversiString()"
-          >
-            Konversi
-          </button>
-        </div>
-      </form>
-
-      <form action="#">
-        <div class="string">
-          <div class="label-input">
-            <label for="text">Input String : </label>
+            <label for="text">Input char : </label>
             <input
               type="text"
               name="text"
-              id="input-string1"
+              id="input-char"
               class="input-string"
               autocomplete="off"
+              onkeyup="tambahText2()"
             />
+            <div class="hasil">
+              <p class="">hasil :</p>
+              <p id="string-hasil-4">...</p>
+            </div>
           </div>
-          <div class="hasil">
-            <p class="">hasil :</p>
-            <p id="hasil-konversi-1">...</p>
-          </div>
-          <button
-            type="button"
-            class="button-string"
-            onclick="konversiInteger1()"
-          >
-            Konversi
-          </button>
-        </div>
-      </form>
+        </form>
 
-      <form action="#">
-        <div class="string">
-          <div class="label-input">
-            <label for="text">Input String : </label>
+        <form id="substringForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <span class="string-span" id="text-string-5">...</span>
+          <div class="string">
+            <label for="text">Input text : </label>
             <input
               type="text"
               name="text"
-              id="input-string2"
+              id="input-string-text-5"
               class="input-string"
               autocomplete="off"
+              onkeyup="tambahText3()"
             />
-          </div>
-          <div class="hasil">
-            <p class="">hasil :</p>
-            <p id="hasil-konversi-2">...</p>
-          </div>
-          <button
-            type="button"
-            class="button-string"
-            onclick="konversiInteger2()"
-          >
-            Konversi
-          </button>
-        </div>
-      </form>
-
-      <form action="#">
-        <div class="string">
-          <div class="label-input">
-            <label for="text">Input Angka : </label>
+            <label for="text">Input index 1 : </label>
             <input
               type="text"
               name="text"
-              id="input-angkaInteger"
+              id="input-index-1"
               class="input-string"
               autocomplete="off"
             />
+            <label for="text">Input index 2 : </label>
+            <input
+              type="text"
+              name="text"
+              id="input-index-2"
+              class="input-string"
+              autocomplete="off"
+            />
+            <div class="hasil">
+              <p class="">hasil :</p>
+              <p id="string-hasil-5">...</p>
+            </div>
+            <button
+              type="button"
+              class="button-string"
+              onclick="tampilString4()"
+            >
+              Tampilkan
+            </button>
           </div>
-          <div class="hasil">
-            <p class="">hasil :</p>
-            <p id="hasil-konversiFloat">...</p>
+        </form>
+
+        <form id="toStringForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <div class="string">
+            <div class="label-input">
+              <label for="text">Input Angka : </label>
+              <input
+                type="text"
+                name="text"
+                id="input-number"
+                class="input-string"
+                autocomplete="off"
+              />
+            </div>
+            <div class="hasil">
+              <p class="">hasil :</p>
+              <p id="hasil-konversi">...</p>
+            </div>
+            <button
+              type="button"
+              class="button-string"
+              onclick="konversiString()"
+            >
+              Konversi
+            </button>
           </div>
-          <button type="button" class="button-string" onclick="konversiFloat()">
-            Konversi
-          </button>
-        </div>
-      </form>
-    </div>
+        </form>
+
+        <form id="NumberForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <div class="string">
+            <div class="label-input">
+              <label for="text">Input String : </label>
+              <input
+                type="text"
+                name="text"
+                id="input-string1"
+                class="input-string"
+                autocomplete="off"
+              />
+            </div>
+            <div class="hasil">
+              <p class="">hasil :</p>
+              <p id="hasil-konversi-1">...</p>
+            </div>
+            <button
+              type="button"
+              class="button-string"
+              onclick="konversiInteger1()"
+            >
+              Konversi
+            </button>
+          </div>
+        </form>
+
+        <form id="parseIntForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <div class="string">
+            <div class="label-input">
+              <label for="text">Input String : </label>
+              <input
+                type="text"
+                name="text"
+                id="input-string2"
+                class="input-string"
+                autocomplete="off"
+              />
+            </div>
+            <div class="hasil">
+              <p class="">hasil :</p>
+              <p id="hasil-konversi-2">...</p>
+            </div>
+            <button
+              type="button"
+              class="button-string"
+              onclick="konversiInteger2()"
+            >
+              Konversi
+            </button>
+          </div>
+        </form>
+
+        <form id="parseFloatForm" class="form-container" action="#">
+          <button type="button" class="close-btn" onclick="closeForm()">X</button>
+          <div class="string">
+            <div class="label-input">
+              <label for="text">Input Angka : </label>
+              <input
+                type="text"
+                name="text"
+                id="input-angkaInteger"
+                class="input-string"
+                autocomplete="off"
+              />
+            </div>
+            <div class="hasil">
+              <p class="">hasil :</p>
+              <p id="hasil-konversiFloat">...</p>
+            </div>
+            <button
+              type="button"
+              class="button-string"
+              onclick="konversiFloat()"
+            >
+              Konversi
+            </button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </section>
+    <div class="overlay" id="overlay" onclick="closeForm()"></div>
     <script src="program.js"></script>
   </body>
 </html>

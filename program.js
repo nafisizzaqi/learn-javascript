@@ -339,3 +339,32 @@ function konversiFloat() {
   let hasil = Number.isInteger(float) ? float.toFixed(1) : float;
   document.getElementById("hasil-konversiFloat").textContent = hasil;
 }
+
+function showForm(formId) {
+  // Sembunyikan semua form
+  document.querySelectorAll(".form-container").forEach((form) => {
+    form.style.display = "none";
+  });
+
+  // Tampilkan overlay
+  document.getElementById("overlay").style.display = "block";
+
+  let form = document.getElementById(formId);
+  if (form) {
+    form.style.display = "block";
+
+    // Scroll ke form dengan smooth
+    form.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+function closeForm() {
+  // Sembunyikan semua form
+  document.querySelectorAll(".form-container").forEach((form) => {
+    form.style.display = "none";
+  });
+
+  // Sembunyikan overlay
+  document.getElementById("overlay").style.display = "none";
+}
+
